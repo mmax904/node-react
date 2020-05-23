@@ -19,3 +19,4 @@ Used create react app.
 # Run below commands to run
 * npm install
 * npm start
+* use email: mmanish904@gmail.com and  password: secret123 to login
