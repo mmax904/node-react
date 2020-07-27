@@ -1,18 +1,5 @@
-const { check, query, validationResult } = require('express-validator')
-
-export const validationResults = (req, res, next) => {
-  try {
-    validationResult(req).throw()
-    if (req.body.email) {
-      req.body.email = req.body.email.toLowerCase()
-    }
-    return next()
-  } catch (err) {
-    res.status(422).json({
-      errors: err.mapped()
-    })
-  }
-}
+import { check, query } from 'express-validator';
+import { validationResults } from '../utils/validations';
 
 export const login = [
   check('email')

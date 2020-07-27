@@ -1,11 +1,22 @@
 const ErrorHandler = (err, req, res, next) => {
-    // set locals, only providing error in development
-	res.locals.message = err.message;
-	res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-	// render the error page
-	res.status(err.status || 500);
-	res.render('error');
+	err = req.app.get('env') === 'dev' ? err : {};
+	const status = err.status || 500;
+	const message = err.message || '';
+	const errors = err.errors || err
+	//For post request to workk with errors res.send on validator
+	if(req.url.includes('/api/')) {
+		res.status(status).json({
+			data:[],
+			errors,
+			message,
+		});
+	} else {
+		res.locals.status = status;
+		res.locals.errors = errors;
+		res.locals.message = message;
+		res.status(status).render('error');
+	}
+	
 }
 
 export default ErrorHandler;
