@@ -47,7 +47,7 @@
 		"session-memory-store": "^1.0.0",
 		"set-value": ">=3.0.1",
 		"uuid": "^8.1.0",
-		"validator": "^13.0.0"
+		"validator": "^13.7.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.8.4",
