@@ -16,7 +16,7 @@
 	"dependencies": {
 		"bcrypt-nodejs": "0.0.3",
 		"bcryptjs": "^2.4.3",
-		"body-parser": "^1.18.3",
+		"body-parser": "^1.20.1",
 		"connect-flash": "^0.1.1",
 		"cookie-parser": "~1.4.3",
 		"crypto": "^1.0.1",
@@ -24,7 +24,7 @@
 		"debug": "~4.1.1",
 		"dotenv": "^8.2.0",
 		"ejs": "^3.1.3",
-		"express": "^4.16.4",
+		"express": "^4.18.2",
 		"express-es6-template-engine": "^2.2.0",
 		"express-flash": "0.0.2",
 		"express-layout": "^0.1.0",
